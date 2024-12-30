@@ -8,7 +8,7 @@ public class ShamirSecretSharing {
 
     public static void main(String[] args) {
         try {
-            // Parse JSON files for both test cases
+            
             String[] files = {"testcase1.json", "testcase2.json"};
             for (String file : files) {
                 JSONParser parser = new JSONParser();
@@ -21,12 +21,12 @@ public class ShamirSecretSharing {
     }
 
     private static void solveShamirSecret(JSONObject jsonObject) {
-        // Read keys
+        
         JSONObject keys = (JSONObject) jsonObject.get("keys");
         long n = (long) keys.get("n");
         long k = (long) keys.get("k");
 
-        // Read and decode points
+        
         Map<Integer, Long> points = new HashMap<>();
         for (Object key : jsonObject.keySet()) {
             if (key.equals("keys")) continue;
@@ -38,7 +38,7 @@ public class ShamirSecretSharing {
             points.put(x, y);
         }
 
-        // Solve polynomial using Lagrange Interpolation
+        
         long constantTerm = findConstant(points, k);
         System.out.println("Constant term (c): " + constantTerm);
     }
