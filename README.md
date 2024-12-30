@@ -1,4 +1,4 @@
-# catalog
+# Shamir's Secret Sharing
 This repository contains the solution of a simplified version of Shamir's Secret Sharing algorithm.
 ## Problem Statement
 Consider an unknown polynomial of degree m. You would require m+1 roots of the polynomial to solve for the coefficients, represented as k = m + 1.
